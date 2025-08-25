@@ -26,6 +26,7 @@ console.log(getHumanChoice());
 
 
 
+
 function playgame(){
 
     let userScore = 0;
@@ -85,6 +86,7 @@ function playgame(){
             console.log("paper beats rock");
 
             return "You lose! Paper beats Rock";
+    
         }
         else if(humanChoice === "paper" && computerChoice === "scissors"){
 
