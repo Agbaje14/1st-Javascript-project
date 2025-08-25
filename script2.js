@@ -19,14 +19,10 @@ alert("Welcome to the Rock, Paper, Scissors Game!");
 
 
 function getHumanChoice(){
-    let userInput = prompt("Enter your choice(Rock, Paper or Scissors))")
+    let userInput = prompt("Enter your choice (Rock, Paper or Scissors)")
 
     return userInput
 }
-
-console.log (getHumanChoice());
-
-
 
 function playgame(){
 
@@ -45,9 +41,9 @@ function playgame(){
             (humanAns === "rock" && compAns ==="scissors") || (humanAns === "scissors" && compAns === "paper") || (humanAns === "paper" && compAns === "rock")
         ){
             humanScore++;
-            alert (`You win because ${humanAns} beats ${compAns}`)
+            alert (`The computer chose ${compAns} and you chose ${humanAns} so you win because ${humanAns} beats ${compAns}`)
         } else {
-            alert (`You lose because ${compAns} beats ${humanAns}`)
+            alert (`The computer chose ${compAns} and you chose ${humanAns} so you lose because ${compAns} beats ${humanAns}`)
             computerScore++;
         }
 
@@ -95,9 +91,13 @@ function playgame(){
     round5();
 
     if (humanScore > computerScore){
-        alert("You win the game!")
-    } else {
-        alert("The computer wins")
+        alert(`You win the game!   Full score: You: ${humanScore} - Computer: ${computerScore}`)
+    } else if(humanScore === computerScore){
+        alert(`It is a tie!    Full score: You: ${humanScore} - Computer: ${computerScore}`)
+    }
+    
+    else {
+        alert(`The computer wins     Full score: You: ${humanScore} - Computer: ${computerScore}`)
     }
 
     
