@@ -30,6 +30,9 @@ console.log (getHumanChoice());
 
 function playgame(){
 
+    const humanSelection = getComputerChoice();
+    const computerSelection = getComputerChoice();
+
     let humanScore = 0
     let computerScore = 0
 
@@ -53,11 +56,32 @@ function playgame(){
 
     }
 
-    const humanSelection = getComputerChoice();
-    const computerSelection = getComputerChoice();
+    function round2(){
+        alert ("Round 2!")
+        playRound(humanSelection, computerSelection);
+    }
+    function round3(){
+        alert ("Round 3!")
+        playRound(humanSelection, computerSelection);
+    }
+    function round4(){
+        alert ("Round 4!")
+        playRound(humanSelection, computerSelection);
+    }
+    function round5(){
+        alert ("Round 5!")
+        playRound(humanSelection, computerSelection);
+    }
 
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
+    round2();
+    round3();
+    round4();
+    round5();
+
+    
+    // playRound(humanSelection, computerSelection);
+    // playRound(humanSelection, computerSelection);
+    // playRound(humanSelection, computerSelection);
 }
+
+playgame();
